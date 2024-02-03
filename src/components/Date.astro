@@ -2,8 +2,5 @@
 const { date } = Astro.props;
 ---
 
-<p> {date.vp} </p>
-<p> {date.pm} </p>
-<p> {date.kk} </p>
-<p> {date.vuosi} </p>
-<p> {date.aika} </p>
+<h2>Nyt on: </h2>
+<h2>{date.vp}<br>{date.pm}.{date.kk}.{date.vuosi}<br>{date.aika} </h2>

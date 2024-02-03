@@ -20,26 +20,32 @@ let d = myDate()
 				justify-content: center;
 				align-items: center;
 			}
+			.giffi {
+				display: block;
+				margin: 0;
+				padding: 10px;
+				position: absolute;
+				top: 60px;
+				right: 100px;
+			}
+			.btn1 {
+				display: block;
+				margin: 0;
+				padding: 10px;
+				position: absolute;
+				top: 280px;
+				right: 20px;
+			}
 		</style>
 		<title>lol</title>
 	</head>
 	<body>
 		<h1 class="otsikko">Moi, koodi101</h1>
-		<img src="gomerrunner.gif" height="300px">
+		<img class="giffi" src="gomerrunner.gif" height="200px">
 		
 		<MyDate date={d}/>
-		<MyDate date={d}/>
 
-		<ul>
-			<li>Moi</li>
-			<li>Hei</li>
-			<ol>
-				<li>Hej</li>
-				<li>Hei</li>
-				<li>hoi</li>
-			</ol>
-		</ul>
-		<button>
+		<button class="btn1">
 			<img src="download_btn.png" height="100px">
 			<br> CLICK ME!!
 		</button>
