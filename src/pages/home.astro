@@ -5,6 +5,8 @@ import {
 } from "./myfirst"
 let d = myDate()
 
+const response = await fetch("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.19&lon=24.95")
+const test = await response.json()
 ---
 
 <html lang="fi">
@@ -41,17 +43,11 @@ let d = myDate()
 		<title>koodi101</title>
 	</head>
 	<body>
-		<h1 class="otsikko">Moi, koodi101</h1>
-		<MyDate date={d}/>
-		<img src="shigure-ui-dance.gif" height="300px">
-
-		<img class="giffi" src="gomerrunner.gif" height="200px">
-		<a href="to_download/secret-file.txt" download>
-			<button class="btn1">
-				<img src="download_btn.png" height="100px">
-				<br> CLICK ME!!
-			</button>
-		</a>
+		<h1>Test: </h1>
+		<code>{test.properties.meta.updated_at}</code>
+		<br>
+		<code>{test.properties.timeseries[0].time}<code>
+		<br>
+		<code>{test.properties.timeseries[0].data.instant.details.air_temperature}</code>
 	</body>
-	<script src="./myfirst.js"></script>
 </html>
