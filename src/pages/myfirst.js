@@ -1,5 +1,5 @@
 
-let myDate = function () {
+export function myDate () {
     let ajankohta = Date();
     let vp = "", kk = "", pm = "", vuosi = "", aika = "", gmt = "";
     let j = 0; 
@@ -35,17 +35,18 @@ let myDate = function () {
                     "Fri":"perjantai", "Sat":"lauantai", "Sun":"sunnuntai"};
     let kaikkikk = {"Jan":"01","Feb":"02","Mar":"03","Apr":"04","May":"05","Jun":"06","Jul":"07",
                     "Aug":"08","Sep":"09","Oct":"10","Nov":"11","Dec":"12"}
-    let ulos = "viikonpäivä on: " + kaikkivp[vp] 
-         + "<br>päivämäärä on: " + pm + "." + kaikkikk[kk] 
-         + "<br>vuosi on: " + vuosi 
-         + "<br>aika on: " + aika
-         + "<br>gmt: " + gmt;
+    // let ulos = "viikonpäivä on: " + kaikkivp[vp] 
+    //      + "\npäivämäärä on: " + pm + "." + kaikkikk[kk] 
+    //      + "\nvuosi on: " + vuosi 
+    //      + "\naika on: " + aika
+    //      + "\ngmt: " + gmt;
     
-    // let ulos = {vp: kaikkivp[vp], pm};
+    let ulos = {vp: kaikkivp[vp], pm, kk: kaikkikk[kk], vuosi, aika, gmt};
     
     return ulos;
 }
 
-const p = document.querySelectorAll('p#aika') [ 0 ];
+// const p = document.querySelectorAll('p#aika') [ 0 ];
 
-p.innerHTML = myDate();
+// p.innerHTML = myDate();
+// // 

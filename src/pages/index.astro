@@ -1,5 +1,9 @@
 ---
-
+import MyDate from '../components/Date.astro';
+import {
+	myDate
+} from "./myfirst"
+let d = myDate()
 ---
 
 <html lang="fi">
@@ -22,7 +26,10 @@
 	<body>
 		<h1 class="otsikko">Moi, koodi101</h1>
 		<img src="gomerrunner.gif" height="300px">
-		<p id="aika"></p>
+		
+		<MyDate date={d}/>
+		<MyDate date={d}/>
+
 		<ul>
 			<li>Moi</li>
 			<li>Hei</li>
